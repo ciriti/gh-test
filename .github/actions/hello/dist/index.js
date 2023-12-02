@@ -30795,6 +30795,8 @@ const github = __nccwpck_require__(6606)
 
 try{
 
+    throw new Error("Some error message")
+
     core.debug("Debug message");
     core.warning("warning message");
     core.error("error message");
@@ -30815,7 +30817,7 @@ try{
     core.endGroup();
 
 } catch (er) {
-    core.setFailed(er);
+    core.setFailed(er.message);
 }
 })();
 
