@@ -2,6 +2,12 @@ const core = require("@actions/core")
 const github = require("@actions/github")
 
 try{
+
+    core.debug("Debug message");
+    core.warning("warning message");
+    core.error("error message");
+
+
     const name = core.getInput("who_to_greet");
 
     console.log(`Hello ${name}`);
